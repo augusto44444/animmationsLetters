@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <title>Togle</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        label {
+            margin-right: 25px;
+
+        }
+
+        label span {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            background-color: #CCC;
+            border-radius: 15px;
+        }
+
+        label span:before {
+            content: '';
+            display: block;
+            background-color: #eee;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+            transition: all .2s ease-in-out;
+        }
+
+        label input:checked+span:before {
+            transform: translateX(30px);
+            background-color: red;
+        }
+
+        label input {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        label, label p {
+            display: inline-block;
+            -webkit-touch-callout: none;
+            /* iPhone OS, Safari */
+            -webkit-user-select: none;
+            /* Chrome, Safari 3 */
+            -khtml-user-select: none;
+            /* Safari 2 */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE10+ */
+            user-select: none;
+            /* Possível implementação no futuro */
+        }
+
+        label input:focus + span{
+           box-shadow: 0 0 0 2px red;
+           
+        }
+    </style>
+
+<body>
+    <h1>Estrutura basica</h1>
+
+    <label>
+        <input type="checkbox">
+        <span ></span>
+        <p>Esporte</p>
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span ></span>
+        <p>Politica</p>
+    </label>
+
+    <label>
+        <input type="checkbox">
+        <span ></span>
+        <p>Educação</p>
+    </label>
+</body>
+
+</html>
